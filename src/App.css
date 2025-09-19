@@ -1,0 +1,18 @@
+.App {
+    height: 100vh;
+    background-color: #FF9770;
+}
+.kaizen-tob-logo-container {
+    min-width: 10rem;
+    max-width: 20%;
+    margin-bottom: 2rem;
+}
+.kaizen-tob-logo {
+    width: 100%;
+}
+.to-do-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

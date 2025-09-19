@@ -1,10 +1,26 @@
-
 import './App.css';
+import logo from './imgs/ChatGPT Image 1 sept 2025, 13_02_16.png'
 
 function App() {
   return (
 
     <div className="App">
+
+
+
+      <div className='to-do-container'>
+        <div className='kaizen-tob-logo-container'>
+          <img 
+            className='kaizen-tob-logo'
+            alt='logo'
+            src={logo}
+          />
+        </div>
+
+        <div className='to-do-card'>
+
+        </div>
+      </div>
 
     </div>
   );

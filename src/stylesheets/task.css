@@ -1,0 +1,28 @@
+.task-container {
+    width: 50rem;
+    min-height: 6.5px;
+    background-color: #f0a77d;
+    margin: 0.5rem 0;
+    padding: 8rem, 15rem, 8rem, 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.task-text {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+}
+
+.task-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+}

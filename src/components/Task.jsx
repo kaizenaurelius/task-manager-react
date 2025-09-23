@@ -1,4 +1,5 @@
 import '../stylesheets/task.css'
+import { CiSquareRemove } from "react-icons/ci";
 
 
 function Task({text}) {
@@ -9,8 +10,8 @@ function Task({text}) {
 					{text}
 				</div>
 
-				<div className='task-icon'>
-					Eliminar
+				<div className='task-icons-container'>
+					<CiSquareRemove />
 				</div>
 
 			</div>

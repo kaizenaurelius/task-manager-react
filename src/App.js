@@ -1,5 +1,6 @@
 import './App.css';
 import Task from './components/Task';
+import TaskForm from './components/TaskForm';
 import logo from './imgs/ChatGPT Image 1 sept 2025, 13_02_16.png'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
 
 
-      <div className='to-do-container'>
+      <div className='task-container'>
         <div className='kaizen-tob-logo-container'>
           <img 
             className='kaizen-tob-logo'
@@ -18,13 +19,15 @@ function App() {
           />
       </div>
 
-      <div className='to-do-list-container'>
+      <div className='tasks-list-container'>
         <h1>
           My Tasks
         </h1>
+          <TaskForm/>
           <Task 
             text='Estudiar'
           />
+
         </div>
       </div>
 

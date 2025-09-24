@@ -1,4 +1,4 @@
-.task-container {
+.single-task-container {
     width: 50rem;
     min-height: 6.5px;
     background-color: #70EE9C;
@@ -37,5 +37,5 @@
   transition: color 0.2s, opacity 0.2s;
 }
 .completed-task {
-    background-color: #484041;
+    background-color: black;
 }

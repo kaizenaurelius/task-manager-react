@@ -6,7 +6,7 @@ function Task({text, completed}) {
 
 
 	return(
-			<div className={`task-container${completed ? ' completed-task' : ''}`}>
+			<div className={`single-task-container${completed ? ' completed-task' : ''}`}>
 
 				<div className='task-text'>
 					{text}
@@ -15,7 +15,7 @@ function Task({text, completed}) {
 				<div 
 					className='task-icons-container'>
 					<CiSquareRemove 
-					className='task-icon'
+						className='task-icon'
 					/>
 				</div>
 

@@ -2,20 +2,25 @@ import '../stylesheets/task.css'
 import { CiSquareRemove } from "react-icons/ci";
 
 
-function Task({text, completed}) {
+function Task({id, text, completed, completeTask, deleteTask}) {
+
+
 
 
 	return(
 			<div className={`single-task-container${completed ? ' completed-task' : ''}`}>
 
-				<div className='task-text'>
+				<div 
+					onClick={() => completeTask(id)}
+					className='task-text'>
 					{text}
 				</div>
 
 				<div 
+					onClick={() => deleteTask(id)}
 					className='task-icons-container'>
 					<CiSquareRemove 
-						className='task-icon'
+					className='task-icon'
 					/>
 				</div>
 

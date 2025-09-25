@@ -1,7 +1,6 @@
 import './App.css';
-import Task from './components/Task';
-import TaskForm from './components/TaskForm';
 import logo from './imgs/ChatGPT Image 1 sept 2025, 13_02_16.png'
+import ListOfTasks from './components/ListOfTasks';
 
 function App() {
   return (
@@ -17,21 +16,18 @@ function App() {
             alt='logo'
             src={logo}
           />
-      </div>
-
-      <div className='tasks-list-container'>
-        <h1>
-          My Tasks
-        </h1>
-          <TaskForm/>
-          <Task 
-            text='Estudiar'
-          />
-
+        </div>
+        <div className='main-tasks-list-container'>
+          <h1>
+            My Tasks
+          </h1>
+          <ListOfTasks />
         </div>
       </div>
 
+
     </div>
+
   );
 }
 

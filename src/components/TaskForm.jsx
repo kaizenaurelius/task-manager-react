@@ -1,7 +1,14 @@
 
 import '../stylesheets/task-form.css'
+import { useState } from 'react';
 
 function TaskForm(props) {
+  const [stateInput, setStateInput] = useState('');
+
+  const handleChange = e => {
+    setStateInput(e.target.value);
+    console.log(stateInput);
+  }
 
 	return (
 
@@ -11,8 +18,11 @@ function TaskForm(props) {
 				placeholder='Write a task'
 				type='text'
 				name='text'
+        onChange={handleChange}
 			/>
-			<button className='task-button'>
+			<button 
+				onSubmit={props.onSubmit}
+				className='task-button'>
 				Add task
 			</button>
 		</form>

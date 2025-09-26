@@ -9,40 +9,33 @@ const [tasks, setTasks] = useState([]);
 
 
 
-const completeTask = (id) => {
-	id.completed = !id.completed
-	setTasks([...tasks])
-	console.log(tasks)
+const addTask = task => { //Task es el argumento que CAPTURA la nueva tarea que le llega desde el componente hijo TaskForm a través de la prop onSubmit
+	if(task.text.trim()){
+		console.log('New task received');
+		task.text = task.text.trim();
+		setTasks(prev => [task, ...prev]); //Se coloca la nueva tarea al inicio del array de tareas porque se pone antes el task que el ...prev
+	}
 }
-const addTask = (task) => {
-		console.log('Task to add:', task)
-		task.preventDefault()
-		task = {
-				text: task.target.text.value,
-				completed: false
-		}
-		console.log(task)
-		setTasks([
-				...tasks,
-				task
-		])
-}
+
 
 return (
 		<>
 				<TaskForm 
-						onSubmit={addTask}
-						// Limpiar el formulario
+						onSubmit={addTask}// Prop para pasar el método addTask al componente hijo TaskForm
+															// onSubmit es el nombre de la prop que se le pasa al componente hijo
+															// addTask es el método que se le pasa como valor a la prop
 				/>
 				<div className="component-list-of-tasks-container">
+
+					{/* Iterar sobre las tareas */}
+					{/*contednedor de todas las tareas*/}
+					{/* Por cada tarea, renderizar un componente Task */}
 					{
 						tasks.map((task, index) => 
 							<Task
-								id={index}
+								id={task.id}
 								text={task.text}
-								completed={task.completed}
-								completeTask={completeTask}
-							/>
+								completed={task.completed}							/>
 						)
 					}
 

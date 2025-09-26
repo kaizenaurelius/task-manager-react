@@ -17,6 +17,20 @@ const addTask = task => { //Task es el argumento que CAPTURA la nueva tarea que 
 	}
 }
 
+const deleteTask = id => {
+	setTasks(prev => prev.filter(task => task.id !== id)) //Filtrar todas las tareas que NO tengan el id que se le pasa como argumento
+}
+
+const completeTask = id => {
+	setTasks(prev => prev.map(task => {
+		if(task.id === id){
+			task.completed = !task.completed; //Cambiar el estado de completed a su opuesto
+		}
+		return task;
+	})
+)
+}
+
 
 return (
 		<>
@@ -25,6 +39,7 @@ return (
 															// onSubmit es el nombre de la prop que se le pasa al componente hijo
 															// addTask es el método que se le pasa como valor a la prop
 				/>
+
 				<div className="component-list-of-tasks-container">
 
 					{/* Iterar sobre las tareas */}
@@ -35,7 +50,9 @@ return (
 							<Task
 								id={task.id}
 								text={task.text}
-								completed={task.completed}							/>
+								completed={task.completed}
+								deleteTask={deleteTask}	
+								completeTask={completeTask}						/>
 						)
 					}
 

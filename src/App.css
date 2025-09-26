@@ -34,7 +34,8 @@ h1 {
 
 .main-tasks-list-container {
     width: 60rem;
-    min-height: 50rem;
+    height: 50rem;
+    overflow-y: auto;
     background-color: #79AEA3;
     padding: 2.5rem;
     margin: 1rem;

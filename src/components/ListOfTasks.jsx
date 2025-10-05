@@ -21,15 +21,24 @@ const deleteTask = id => {
 	setTasks(prev => prev.filter(task => task.id !== id)) //Filtrar todas las tareas que NO tengan el id que se le pasa como argumento
 }
 
+
 const completeTask = id => {
-	setTasks(prev => prev.map(task => {
-		if(task.id === id){
-			task.completed = !task.completed; //Cambiar el estado de completed a su opuesto
-		}
-		return task;
-	})
-)
-}
+    // 1. Usar setTasks para actualizar el estado
+    setTasks(prevTasks => prevTasks.map(task => {
+        // 2. Buscar la tarea por su ID
+        if(task.id === id){
+            // 3. Devolver un NUEVO objeto de tarea
+            // Spread operator (...) para copiar todas las propiedades
+            // y luego sobrescribir 'completed' con su valor opuesto
+            return {
+                ...task, 
+                completed: !task.completed // Invertir el valor actual
+            };
+        }
+        // 4. Devolver las demás tareas sin modificar
+        return task;
+    }));
+};
 
 
 return (

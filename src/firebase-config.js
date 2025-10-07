@@ -14,6 +14,7 @@ const firebaseConfig = {
   storageBucket: "task-manager-react-23df8.firebasestorage.app",
   messagingSenderId: "706854712783",
   appId: "1:706854712783:web:9e8f952861fa122d214eba",
+  measurementId: "G-D8S7ZC4NV8"
 };
 
 // Initialize Firebase App

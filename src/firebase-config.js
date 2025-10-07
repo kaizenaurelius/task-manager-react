@@ -8,8 +8,8 @@ import { getAuth } from 'firebase/auth';
 
 // Your Firebase configuration object (replace with your actual keys)
 const firebaseConfig = {
-  apiKey: "AIzaSyB_IXWhWfvY6DBqgizfUSRB6O-0FtmZH10",
-  authDomain: "task-manager-react-23df8.firebaseapp.com",
+  apiKey: ProcessingInstruction.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: ProcessingInstruction.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: "task-manager-react-23df8",
   storageBucket: "task-manager-react-23df8.firebasestorage.app",
   messagingSenderId: "706854712783",

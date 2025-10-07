@@ -28,5 +28,7 @@ export const auth = getAuth(app);
 // 2. Firestore Database (for saving tasks)
 export const db = getFirestore(app);
 
+const analytics = getAnalytics(app);
+
 // Export the app instance if needed
 export default app;

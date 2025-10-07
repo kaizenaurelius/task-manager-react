@@ -21,6 +21,7 @@ function TaskForm(props) {
     }
 
     props.onSubmit(newTask); //Activa el método onSubmit del componente padre (ListOfTasks) y le pasa la nueva tarea como argumento// el argumento es newTask que se le pasa al componente padre
+    setStateInput(''); // Limpiar el input después de enviar el formulario
     
   }
 

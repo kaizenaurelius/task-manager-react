@@ -52,7 +52,9 @@ function App() {
             <h1>
               My Tasks
             </h1>
-            <ListOfTasks />
+            <ListOfTasks 
+              userId={user.uid} // Pasar el ID del usuario autenticado como prop user es un objeto de firebase que se captura en App.js cuando el usuario se autentica
+            />
           </div>
           )
           :

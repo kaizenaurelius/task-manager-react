@@ -14,13 +14,13 @@ function TaskForm(props) {
   const handleFormSubmit = e => { // Maneja el envío del formulario. Se crea una nueva tarea y se envía al componente padre// Se hace internamente dentro del componente
     e.preventDefault();
 
-    const newTask = {
+    /*const newTask = {  SE VA A CREAR EL OBJETO EN EL COMPONENTE PADRE
       id: uuidv4(),
       text: stateInput,
       completed: false
-    }
+    }*/
 
-    props.onSubmit(newTask); //Activa el método onSubmit del componente padre (ListOfTasks) y le pasa la nueva tarea como argumento// el argumento es newTask que se le pasa al componente padre
+    props.onSubmit(stateInput); //Se pasa el texto de la tarea al componente padre a través de la prop onSubmit que sera el addTask del componente padre ListOfTasks // <-- Pasar SÓLO el texto del input
     setStateInput(''); // Limpiar el input después de enviar el formulario
     
   }
